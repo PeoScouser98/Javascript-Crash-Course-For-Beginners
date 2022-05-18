@@ -1,0 +1,13 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"productName": "macbook pro",
+			"brand": "macbook",
+			"price": 2000
+		},
+		{ "id": 2, "productName": "acer nitro", "brand": "acer", "price": 2000 },
+		{ "id": 3, "productName": "asus rog strix", "brand": "asus", "price": 2000 },
+		{ "id": 4, "productName": "msi modern 14", "brand": "msi", "price": 2000 }
+	]
+}

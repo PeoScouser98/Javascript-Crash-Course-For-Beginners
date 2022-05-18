@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		body {
+			font-family: Roboto;
+		}
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 20px;
+			font-weight: 600;
+		}
+		#calculator {
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px gray;
+			background: rgb(44, 58, 77);
+			inset: 0 0 10px gray;
+		}
+		input,
+		button {
+			padding: 10px 20px;
+			background: slategray;
+			color: #fff;
+			border-radius: 5px;
+			font-size: 24px;
+			font-weight: 600;
+		}
+		#mathExpression {
+			width: -webkit-fill-available;
+			border-radius: 5px;
+			margin: 10px 0;
+			border: 2px solid slateblue;
+			box-shadow: inset 0 0 5px gray;
+			color: #fff;
+			height: 60px;
+			padding: 10px 5px;
+		}
+		#numpad {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 10px;
+		}
+		#keyboard {
+			display: flex;
+			justify-content: flex-start;
+			/* flex-direction: column; */
+			gap: 20px;
+		}
+		#operators {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div id="calculator">
+				<h4 style="color: #fff">
+					CASIO
+					<span
+						style="
+							font-style: italic;
+							color: rgb(255, 0, 128);
+							font-size: 15px;
+							font-weight: 400;
+						"
+						>fx-570</span
+					>
+				</h4>
+				<!-- screen -->
+				<div>
+					<div class="screen" id="mathExpression"></div>
+				</div>
+				<!-- numpad -->
+				<div id="keyboard">
+					<div id="numpad">
+						<input type="button" value="1" onclick="display(this.value)" />
+						<input type="button" value="2" onclick="display(this.value)" />
+						<input type="button" value="3" onclick="display(this.value)" />
+						<input type="button" value="4" onclick="display(this.value)" />
+						<input type="button" value="5" onclick="display(this.value)" />
+						<input type="button" value="6" onclick="display(this.value)" />
+						<input type="button" value="7" onclick="display(this.value)" />
+						<input type="button" value="8" onclick="display(this.value)" />
+						<input type="button" value="9" onclick="display(this.value)" />
+						<input type="button" value="0" onclick="display(this.value)" />
+						<input
+							type="button"
+							id="decimal"
+							value="."
+							onclick="display(this.value)"
+						/>
+						<button
+							id="clear"
+							style="background-color: red"
+							onclick="clearScreen()"
+						>
+							DEL
+						</button>
+					</div>
+					<div id="operators">
+						<input type="button" value="+" onclick="display(this.value)" />
+						<input type="button" value="-" onclick="display(this.value)" />
+						<input type="button" value="*" onclick="display(this.value)" />
+						<input type="button" value="/" onclick="display(this.value)" />
+						<button
+							style="background-color: slateblue"
+							id="equal"
+							onclick="showResult()"
+						>
+							=
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			const mathExpression = document.querySelector("#mathExpression");
+			function display(value) {
+				mathExpression.innerText += value;
+				// console.log(value);
+			}
+			function showResult() {
+				mathExpression.innerText = eval(mathExpression.innerText);
+			}
+			function clearScreen() {
+				mathExpression.innerText = "";
+			}
+		</script>
+	</body>
+</html>

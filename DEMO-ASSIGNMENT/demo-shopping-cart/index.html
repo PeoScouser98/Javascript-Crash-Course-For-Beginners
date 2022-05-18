@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div id="addToCart-modal">
+				<div id="add-product-form">
+					<form action="" id="add-product--form">
+						<div class="form-group">
+							<label for="product-name">Tên sản phẩm: </label>
+							<input type="text" id="product-name" class="form-control" />
+							<small class="message"></small>
+						</div>
+						<div class="form-group">
+							<label for="price">Giá: </label>
+							<input type="number" id="price" class="form-control" />
+							<small class="message"></small>
+						</div>
+						<div class="form-group">
+							<label for="quantity">Số lượng: </label>
+							<input type="number" id="quantity" class="form-control" />
+							<small class="message"></small>
+						</div>
+						<div class="form-group">
+							<input
+								type="submit"
+								id="add-product--btn"
+								value="Thêm sản phẩm"
+							/>
+							<button type="button" id="hideModal-btn">Đóng cửa sổ</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="main-interface">
+				<h1 style="text-align: center">
+					<i class="bi bi-cart-fill"></i> Demo Shopping Cart
+				</h1>
+				<button id="show-modal-btn">Thêm sản phẩm</button>
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Sản phẩm</th>
+							<th>Giá</th>
+							<th>Số lượng</th>
+							<th>Thành tiền</th>
+							<th>Thao tác</th>
+						</tr>
+					</thead>
+					<!-- chứa thông tin của các sản phẩm -->
+					<tbody id="cart-list">
+						<!-- các sản phẩm được render từ mảng tại đây -->
+					</tbody>
+					<!-- tính tiền -->
+					<tfoot>
+						<tr>
+							<td colspan="4">Tổng tiền</td>
+							<td colspan="2" id="total-amount">0</td>
+						</tr>
+					</tfoot>
+				</table>
+				<button id="multi-delete-button">Xóa sản phẩm được chọn</button>
+			</div>
+		</div>
+		<script src="./validation.js"></script>
+		<script src="./app.js"></script>
+	</body>
+</html>

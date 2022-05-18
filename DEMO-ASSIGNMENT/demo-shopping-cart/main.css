@@ -1,0 +1,91 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: roboto;
+}
+.container {
+	max-width: 100%;
+	position: relative;
+}
+table {
+	border: 1px solid gray;
+	border-collapse: collapse;
+	margin: 20px 0;
+	width: 100%;
+}
+th,
+td {
+	border: 1px solid gray;
+	padding: 20px;
+}
+h1 {
+	color: orange;
+	text-align: center;
+	margin-top: 0;
+}
+#addToCart-modal {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.322);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+#add-product--form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: #fff;
+	padding: 20px;
+	width: 600px;
+	border-radius: 10px;
+}
+.form-group {
+	height: 70px;
+}
+.form-control {
+	display: block;
+	padding: 5px;
+	margin-top: 5px;
+	width: -webkit-fill-available;
+	border: none;
+	border-bottom: 1px solid lightgray;
+	outline: none;
+}
+.main-interface {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 200px 0;
+}
+.message {
+	color: red;
+	font-weight: 600;
+}
+#add-product--btn,
+button {
+	padding: 10px 20px;
+	color: #fff;
+	background: orange;
+	border: none;
+	border-radius: 5px;
+	opacity: 0.5;
+	transition: ease-in-out 300ms;
+}
+button:hover {
+	opacity: 1;
+}
+.remove-btn {
+	background-color: crimson;
+}
+#hideModal-btn {
+	background: crimson;
+}
+input[type="checkbox"]:checked {
+	background-color: orange;
+}

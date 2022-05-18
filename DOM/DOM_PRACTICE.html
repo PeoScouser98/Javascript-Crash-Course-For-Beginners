@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Document</title>
+	</head>
+	<style>
+		#input3 {
+			display: none;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<input type="radio" name="1" id="input1" />
+			<input type="radio" name="2" id="input2" />
+			<input type="text" name="3" id="input3" />
+		</div>
+		<!-- click vào button tạo ra 1 sự kiện hiển thị thông báo -->
+		<script>
+			const input2 = document.querySelector("#input2");
+			const input3 = document.querySelector("#input3");
+			input2.onchange = function () {
+				input3.style.display = "block";
+			};
+		</script>
+	</body>
+</html>

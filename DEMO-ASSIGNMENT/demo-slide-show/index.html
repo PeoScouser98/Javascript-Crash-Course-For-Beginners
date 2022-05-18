@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!-- khung chưa slide ảnh -->
+			<div class="slide-container">
+				<div class="slide-content">
+					<img src="./img/img1.jpg" alt="" />
+				</div>
+				<div class="slide-content">
+					<img src="./img/img2.jpg" alt="" />
+				</div>
+				<div class="slide-content">
+					<img src="./img/img3.jpg" alt="" />
+				</div>
+				<!-- nút điều hướng -->
+				<div class="navigation">
+					<button id="prev" onclick="changeSlide(-1)">
+						<i class="bi bi-caret-left-fill"></i>
+					</button>
+					<button id="next" onclick="changeSlide(1)">
+						<i class="bi bi-caret-right-fill"></i>
+					</button>
+				</div>
+				<div class="pagination">
+					<div class="dot"></div>
+					<div class="dot"></div>
+					<div class="dot"></div>
+				</div>
+			</div>
+		</div>
+		<script src="./main.js"></script>
+	</body>
+</html>
